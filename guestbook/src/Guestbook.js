@@ -5,7 +5,7 @@ import GuestbookList from './GuestbookList';
 
 export default function() {
     return (
-        <div class="Guestbook">
+        <div className="Guestbook">
             
             <h1>방명록</h1>
             <GuestbookAddForm />

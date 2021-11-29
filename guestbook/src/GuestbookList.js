@@ -4,8 +4,9 @@ import GuestbookListItem from './GuestbookListItem';
 
 export default function() {
     return (
-      <ul class="Guestbook__List">
+      <ul className="Guestbook__List">
           {guestbookListItems.map((guestbookListItem) => <GuestbookListItem
+                key = {guestbookListItem.no}
                 title = {guestbookListItem.title}
                 content = {guestbookListItem.content} /> )}
       </ul>
