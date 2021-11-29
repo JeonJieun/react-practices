@@ -1,10 +1,10 @@
 import React from 'react';
-import kanbanBoard from './KanbanBoard';
+import KanbanBoard from './KanbanBoard';
 
 export default function() {
     return (
         <div id='App'>
-            <KanbanBoard />
+          <KanbanBoard />
         </div>
     )
-} 
+}
