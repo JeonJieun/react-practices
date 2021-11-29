@@ -1,9 +1,16 @@
 import React from 'react';
+import './assets/css/styles.css';
+import GuestbookAddForm from './GuestbookAddForm';
+import GuestbookList from './GuestbookList';
 
 export default function() {
     return (
-        <div id='App'>
-            <h1>Guestbook</h1>
+        <div class="Guestbook">
+            
+            <h1>방명록</h1>
+            <GuestbookAddForm />
+            <GuestbookList />
+
         </div>
     )
 } 
