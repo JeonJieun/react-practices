@@ -6,11 +6,10 @@ export default function WriteForm({notifyMessage}) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        try{
+        try {
             const message = Array.from(e.target, (input) => {
-                // simple valisation 
-                if(input.value === '')  {
+                // simple validation
+                if(input.value === '') {
                     throw `validation ${input.placeholder} is empty`;
                 }
 
@@ -18,18 +17,17 @@ export default function WriteForm({notifyMessage}) {
             })
             .filter(({n}) => n !== '')
             .reduce((res, {n, v}) => { 
-                res[n] = v; 
-                return res 
-            }, {})
+                res[n] = v;
+                return res;
+            }, {});
 
             refForm.current.reset();
             notifyMessage.add(message);
-        } catch(err) {
+        } catch (err) {
             console.error(err);
         }
+    };
 
-
-    }
     return (
         <form
             ref={refForm}
